@@ -1,0 +1,10 @@
+keycloak:
+  realm_name: "fairdi_nomad_test"
+north:
+  enabled: true  # false
+  hub_connect_ip: "172.17.0.1"  # "172.18.0.1"
+services:
+  mode: development
+  upload_limit: 1000
+process:
+  max_upload_size: 34359738368

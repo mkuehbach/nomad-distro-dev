@@ -7,6 +7,8 @@ requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = [
   "nomad-lab[infrastructure]>=1.4.1",
+  "nomad-north-fiji",
+  "nomad-north-nionswift",
   "pynxtools",
   "pynxtools-apm",
   "pynxtools-em",
@@ -22,6 +24,8 @@ pynxtools-apm = { workspace = true }
 pynxtools-em = { workspace = true }
 pynxtools = { workspace = true }
 pynxtools-xps = { workspace = true }
+nomad-north-nionswift = { workspace = true }
+nomad-north-fiji = { workspace = true }
 
 [tool.uv]
 extra-index-url = [

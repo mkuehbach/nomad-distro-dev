@@ -13,3 +13,9 @@
 [submodule "packages/pynxtools-xps"]
 	path = packages/pynxtools-xps
 	url = git@github.com:FAIRmat-NFDI/pynxtools-xps.git
+[submodule "packages/nomad-north-nionswift"]
+	path = packages/nomad-north-nionswift
+	url = git@github.com:FAIRmat-NFDI/nomad-north-nionswift.git
+[submodule "packages/nomad-north-fiji"]
+	path = packages/nomad-north-fiji
+	url = git@github.com:FAIRmat-NFDI/nomad-north-fiji.git

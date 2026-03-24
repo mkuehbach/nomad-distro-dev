@@ -130,6 +130,21 @@ A complete list of plugins maintained by FAIRmat-NFDI can by found in the [overv
 
 After the initial setup, here’s how to manage your daily development tasks.
 
+0. For CLI-based development set environment variable pointing to the nomad.yaml file.
+   If in nomad-distro-dev e.g. like this.
+
+   ```bash
+   export NOMAD_CONFIG=$PWD/nomad.yaml
+   ```
+
+   There can be an issue with NORTH when the `jupyterhub_cookie_secret` is outdated.
+   A temporary fix is removing that file typically in `packages/nomad-FAIR/jupyterhub_cookie_secret`.
+
+   If the hub is not accessible or you run into authorization issues against the hub,
+   check the `hub_connect_ip` parameter in `nomad.yaml` often it is not the usual value
+   16 but higher values.
+   
+
 1. Update the environment (This step installs the necessary dependencies):
 
    ```bash
