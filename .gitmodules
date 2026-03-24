@@ -22,3 +22,6 @@
 [submodule "packages/nomad-north-vesta"]
 	path = packages/nomad-north-vesta
 	url = git@github.com:FAIRmat-NFDI/nomad-north-vesta.git
+[submodule "packages/nomad-north-apmtools"]
+	path = packages/nomad-north-apmtools
+	url = git@github.com:FAIRmat-NFDI/nomad-north-apmtools.git
