@@ -19,3 +19,6 @@
 [submodule "packages/nomad-north-fiji"]
 	path = packages/nomad-north-fiji
 	url = git@github.com:FAIRmat-NFDI/nomad-north-fiji.git
+[submodule "packages/nomad-north-vesta"]
+	path = packages/nomad-north-vesta
+	url = git@github.com:FAIRmat-NFDI/nomad-north-vesta.git

@@ -9,6 +9,7 @@ dependencies = [
   "nomad-lab[infrastructure]>=1.4.1",
   "nomad-north-fiji",
   "nomad-north-nionswift",
+  "nomad-north-vesta",
   "pynxtools",
   "pynxtools-apm",
   "pynxtools-em",
@@ -26,6 +27,7 @@ pynxtools = { workspace = true }
 pynxtools-xps = { workspace = true }
 nomad-north-nionswift = { workspace = true }
 nomad-north-fiji = { workspace = true }
+nomad-north-vesta = { workspace = true }
 
 [tool.uv]
 extra-index-url = [
