@@ -54,7 +54,7 @@ services:
   # the user data db
   mongo:
     restart: "no"
-    image: mongo:5.0.6
+    image: mongo:8.0
     container_name: nomad_mongo
     environment:
       - MONGO_DATA_DIR=/data/db
