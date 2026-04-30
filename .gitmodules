@@ -1,3 +1,15 @@
 [submodule "packages/nomad-FAIR"]
 	path = packages/nomad-FAIR
 	url = https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-FAIR.git
+[submodule "packages/pynxtools"]
+	path = packages/pynxtools
+	url = https://github.com/FAIRmat-NFDI/pynxtools.git
+[submodule "packages/pynxtools-em"]
+	path = packages/pynxtools-em
+	url = https://github.com/FAIRmat-NFDI/pynxtools-em.git
+[submodule "packages/pynxtools-apm"]
+	path = packages/pynxtools-apm
+	url = https://github.com/FAIRmat-NFDI/pynxtools-apm.git
+[submodule "packages/ifes_apt_tc_data_modeling"]
+	path = packages/ifes_apt_tc_data_modeling
+	url = https://github.com/atomprobe-tc/ifes_apt_tc_data_modeling.git
