@@ -1,3 +1,12 @@
 [submodule "packages/nomad-FAIR"]
 	path = packages/nomad-FAIR
 	url = https://gitlab.mpcdf.mpg.de/nomad-lab/nomad-FAIR.git
+[submodule "packages/nomad-docs"]
+	path = packages/nomad-docs
+	url = https://github.com/FAIRmat-NFDI/nomad-docs.git
+[submodule "packages/nomad-north-apmtools"]
+	path = packages/nomad-north-apmtools
+	url = https://github.com/FAIRmat-NFDI/nomad-north-apmtools.git
+[submodule "packages/nomad-north-emtools"]
+	path = packages/nomad-north-emtools
+	url = https://github.com/FAIRmat-NFDI/nomad-north-emtools.git

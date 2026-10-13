@@ -3,22 +3,32 @@ name = "nomad-distribution"
 description = "nomad distribution template"
 version = "0.1"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 license = { file = "LICENSE" }
 dependencies = [
-    "nomad-lab[infrastructure]>=1.4.3",
-    "nomad-gui==2.0.0b2",  # ==2.0.0a2.dev583",
-    "pynxtools",
-    "pynxtools-apm",
+    "nomad-lab[infrastructure]==2.0.0rc2",
+    "nomad-gui==2.0.0rc2",
+    "pynxtools[dev]",
+    "ifes-apt-tc-data-modeling",
+    "pynxtools-apm[batch,dev,docs,ipynb]",
+    "pynxtools-camecaroot[dev,ipynb]",
+    "nomad-docs",
+    "nomad-north-apmtools",
+    "nomad-north-emtools",
 ]
 
 [tool.uv.workspace]
 members = ["packages/*"]
 
 [tool.uv.sources]
-pynxtools = { workspace = true }
+ifes-apt-tc-data-modeling = { workspace = true }
 nomad-lab = { workspace = true }
+pynxtools = { workspace = true }
 pynxtools-apm = { workspace = true }
+pynxtools-camecaroot = { workspace = true }
+nomad-docs = { workspace = true }
+nomad-north-apmtools = { workspace = true }
+nomad-north-emtools = { workspace = true }
 
 # see https://github.com/FAIRmat-NFDI/nomad-distro-dev/blob/main/pyproject.toml for further plugins and syntax how to
 # link these in via e.g rev, tag, branch, etc.
