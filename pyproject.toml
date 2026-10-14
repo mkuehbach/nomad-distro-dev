@@ -45,12 +45,17 @@ dev = ["nomad-lab[infrastructure, dev]>=1.4.3", "poethepoet>=0.29.0"]
 [tool.poe.tasks]
 submodule = "git submodule update --init --recursive"
 docker = "docker compose up -d"
-setup = ["gui-env", "gui-setup", "docker", "config"]
+setup = ["docker", "config"]
 lint = ["ruff-lint", "ruff-format"]
 
 [tool.poe.tasks.start]
 cmd = "nomad admin run appworker --dev"
+deps = ["start-info"]
 env = { NOMAD_SERVICES_MODE = "development" }
+
+[tool.poe.tasks.start-info]
+cmd = "python -c \"print('NOMAD GUI: http://localhost:8000/nomad-oasis/gui/v2/')\""
+verbosity = -1
 
 [tool.poe.tasks.cpuworker]
 cmd = "nomad admin run action-cpu-worker"
@@ -68,6 +73,9 @@ if not os.path.exists("nomad.yaml"):
         f.write("keycloak:\\n  realm_name: \\"fairdi_nomad_test\\"\\n")
 """
 interpreter = "python"
+
+[tool.poe.tasks.north]
+script = "scripts.north:main"
 
 [tool.poe.tasks.gui-env]
 cmd = "python -W ignore -m nomad.cli dev gui-env"
@@ -100,14 +108,17 @@ cmd = "yarn run start"
 cwd = "packages/nomad-FAIR/gui"
 
 [tool.poe.tasks.gui-setup]
+sequence = ["gui-env", "gui-install"]
+
+[tool.poe.tasks.gui-install]
 control.expr = "sys.platform"
 
-[[tool.poe.tasks.gui-setup.switch]]
+[[tool.poe.tasks.gui-install.switch]]
 case = "win32"
 cmd = "yarn.cmd"
 cwd = "packages/nomad-FAIR/gui"
 
-[[tool.poe.tasks.gui-setup.switch]]
+[[tool.poe.tasks.gui-install.switch]]
 cmd = "yarn"
 cwd = "packages/nomad-FAIR/gui"
 
